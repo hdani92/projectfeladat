@@ -1,0 +1,479 @@
+html,body {
+    --highlight: yellow;
+    --text_color: black;
+    --nav_color: brown;
+    --dark_bg: black;
+    --dark_tx_color: white;
+    --light_bg: white;
+    --light_tx_color: black;
+    --foot_color: linear-gradient(to bottom, rgba(112, 0, 160, 1) 0%,rgba(160, 0, 155, 1) 100%);
+
+    height: 100%;
+    width: 100%;
+    margin: 0; 
+    padding: 0;
+    background: linear-gradient(to bottom, rgba(18, 18, 21, 1) 0%,rgba(38, 38, 41, 1) 100%);
+    
+
+}
+
+body {
+
+    min-height: 100vh;
+    height: 100%;
+    width: 100%;
+    display: flex; /* Use flex to enable flexbox */
+    flex-direction: column;
+    align-items: center; /* Center items vertically */
+    justify-content: flex-start; /* Center items horizontally */
+    padding-top: 160px;
+}
+
+
+
+header {
+    width: 100%;
+    display: flex; /* Enables Flexbox on the header */
+    align-items: center; /* Vertically centers the content */
+    height: 60px; /* Fixed height for the header */
+    position:absolute ;
+    top: 0;
+    z-index: 1;
+    border-radius: 0px 0px 0px 0px;
+    border-bottom: 2px solid rgba(255, 255, 255, 0.5); /* Adjust thickness and color */
+}
+
+.logo {
+    font-size: 40px;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: 100;
+    line-height: 1;
+    color: white;
+    align-items: start;
+    padding-left: 20px;
+    text-decoration: none;
+}
+
+.menu {
+    align-content: end;
+    padding-left: 800px;
+
+}
+
+.menu ul {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    
+}
+
+.menu ul li {
+    margin-left: 20px;
+}
+
+.menu ul li a {
+    font-family: Roboto;
+    text-decoration: none;
+    color: #aaaaaa;
+    font-size: 24px;
+    transition: background-color 0.3s ease;
+    font-weight: 400;
+}
+
+.menu ul li a.active {
+    color: white; 
+    font-weight: 700;
+}
+  
+.kezdolap {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex: 1;
+    width: 100%;
+    height: auto;
+}
+
+@media (max-width: 1440px), (max-height: 1024px) {
+    .kezdolap {
+        width: auto; /* Full viewport width */
+        height: auto;
+        max-height: 100vh; /* Do not exceed viewport height */
+    }
+}
+
+
+.container_index {
+    width: auto;
+    height: auto;
+    display: flex;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+    gap: 20px;
+}
+
+.container_ceg {
+    width: auto;
+    height: auto;
+    display: flex;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 20px;
+}
+
+
+.container_ceg h1 {
+    flex: 1;
+    position: static;
+    width: auto;
+    color: white;
+    font-family: Roboto;
+    font-style: italic;
+    font-size: 40 px;
+    font-weight: 400;
+    align-items: center;
+    line-height: 1.2;
+}
+
+.container_szolg {
+    width: auto;
+    height: auto;
+    display: flex;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 20px;
+}
+
+
+.container_szolg h1 {
+    flex: 1;
+    position: static;
+    width: auto;
+    color: white;
+    font-family: Roboto;
+    font-style: italic;
+    font-size: 40 px;
+    font-weight: 400;
+    align-items: center;
+    line-height: 1.2;
+}
+
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(3, 400px);
+    grid-template-rows: repeat(5, auto);
+    align-items: start;
+    width: auto;
+    max-width: 1440px;
+    position:static;
+    flex-direction: column;
+    justify-content: start;
+    padding: 50px 50px 50px 50px;
+    box-sizing: border-box;
+    gap: 20px;
+}
+
+
+
+
+.grid-item0 {
+    color: white; /* Text color of grid items */
+    display: flex; /* Flexbox for centering text */
+    align-items: center; /* Center items vertically */
+    justify-content: center; /* Center items horizontally */
+    font-size: 16px; /* Font size */
+    text-align: center;
+    color: white;
+    width: 100%;
+}
+.grid-item1 {
+    font-family: Roboto;
+    color: white; /* Text color of grid items */
+    display: flex; /* Flexbox for centering text */
+    align-items: center; /* Center items vertically */
+    justify-content: center; /* Center items horizontally */
+    font-size: 24px; /* Font size */
+    font-weight: 700;
+    line-height: 1.2;
+    letter-spacing: 0;
+    text-align: center;
+    color: white;
+    width: 100%;
+    
+}
+
+.grid-item2 {
+    font-family: Roboto;
+    color: white; /* Text color of grid items */
+    display: flex; /* Flexbox for centering text */
+    align-items: center; /* Center items vertically */
+    justify-content: center; /* Center items horizontally */
+    font-size: 24px; /* Font size */
+    font-weight: 400;
+    text-align: left;
+    color: white;
+    width: 100%;
+
+}
+
+
+
+.acme {
+    color: rgba(255, 255, 255, 1);
+    text-transform: none;
+    line-break: auto;
+    overflow-wrap: initial;
+    white-space: pre;
+    text-rendering: geometricPrecision;
+    caret-color: rgba(255, 255, 255, 1);
+    text-decoration: none;
+    letter-spacing: 15px;
+    font-size: 64px;
+    font-family: "Roboto";
+    font-style: normal;
+    font-weight: 900;
+    }
+
+.divider {
+    width: 1px;
+    height: 200px;
+    background-color: #F9FAFF;
+    border-radius: 0px;
+    flex-shrink: 0;
+}
+
+.infobox {
+    width: auto;
+    gap: 24px;
+    margin: 0;
+    text-align: left;
+
+    position: relative; /* Position relative to position the pseudo-element */
+    display: inline-block; /* Make the element inline-block to fit content */
+    font-size: 24px;
+    color: #333;
+    cursor: pointer;
+    padding-bottom: 5px; /* Space for the hover line */
+
+}
+
+.infobox a {
+    height: 65px;
+    line-height: 1.2;
+    color: rgba(170, 170, 170, 1);
+    text-transform: none;
+    line-break: auto;
+    overflow-wrap: initial;
+    white-space: pre;
+    text-rendering: geometricPrecision;
+    caret-color: rgba(170, 170, 170, 1);
+    text-decoration: none;
+    letter-spacing: 0px;
+    font-size: 54px;
+    font-family: "Roboto";
+    font-style: normal;
+    font-weight: 100;
+
+    position: relative;
+    display: inline-block; /* To ensure the pseudo-element positions relative to the text */
+   
+}
+
+.infobox ul {
+    list-style-type: none;
+}
+
+.infobox li {
+    margin: 10px 0;
+}
+
+.infobox a::after {
+    content: ''; /* Required to create a pseudo-element */
+    position: absolute; /* Position the pseudo-element relative to the parent */
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 2px;
+    background-color: rgba(170, 170, 170, 1);
+    transform: scaleX(0); /* Initially hide the underline */
+    transition: transform 0.4s ease; /* Smooth transition for the hover effect */
+    transform-origin: bottom right; /* Line animation starts from the right */
+}
+
+.infobox a:hover::after {
+    transform: scaleX(1); /* Show the underline on hover */
+    transform-origin: bottom left; /* Line expands from the left */
+}
+
+
+
+.container_kapcsolat {
+
+    display: flex;
+    align-items: center;
+
+    gap: 20px;
+
+    
+}
+
+
+.container_kapcsolat h1 {
+    flex: 1;
+    position: static;
+    width: auto;
+    color: white;
+    font-family: Roboto;
+    font-style: italic;
+    font-size: 40 px;
+    font-weight: 400;
+    align-items: center;
+    line-height: 1.2;
+}
+
+
+
+.kapcsolat_box {
+    display: grid;
+    grid-template-columns: repeat(2, 500px);
+    flex-direction: column;
+    padding: 20px;
+}
+
+.kapcsolat_box_left {
+    width: auto;
+    color: white;
+    font-family: Roboto;
+    font-size: 40 px;
+    align-items: left;
+    padding-right: 20px;
+    line-height: 1.2;
+    font-style: italic;
+}
+
+.kapcsolat_box_right {
+    padding-left: 120px;
+}
+
+
+.kapcsolat_right iframe {
+    width: 100%;
+    height: 100%;
+    border: 0;
+    border-radius: 8px;
+}
+
+.kapcsolat_box p {
+    flex: 1;
+    position: static;
+    width: auto;
+    color: white;
+    font-family: Roboto;
+    font-size: 24 px;
+    font-weight: 700;
+    align-items: center;
+}
+
+.kapcsolat_box ul {
+    color: white;
+}
+
+
+
+.form-container {
+    display: flex;
+    background-color: #fff;
+    padding: 20px;
+    width: 100%;
+    justify-content:space-between;
+    max-width: 1024px;
+    background-color: var(--light_bg);
+    color: var(--text_color);
+}
+
+.row {
+    display: flex;
+    justify-content:space-between;
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+.col {
+    
+    justify-content:space-between;
+
+}
+
+.full-width {
+    width: 100%;
+}
+
+
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+textarea {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+label {
+    font-family: Roboto;
+    font-size: 24px;
+    display:block;
+    max-width: 180px;
+    width: 100%;
+    text-align: left;
+    font-weight: 700;
+}
+input, textarea {
+    background-color: #888888;;
+}
+
+.kuld {
+    text-align: right;
+    background-color: var(--foot_color);
+
+    width: 100%;
+    padding: 10px;
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-size: 24px;
+}
+
+footer {
+    width: 100%;
+    background: var(--foot_color);
+    display: flex;
+    justify-content: center;
+    padding-top: 80px;
+    padding-bottom: 80px;
+    text-align: center;
+}
+
+.footer_text {
+    color: rgba(255, 255, 255, 1);
+    font-family: "Roboto";
+    font-style: normal;
+    font-size: 120px;
+    font-weight: 400;
+    line-height: 1.2;
+    letter-spacing: 200px;
+    text-decoration: none;
+    text-transform: none;
+    text-transform: none;
+
+}

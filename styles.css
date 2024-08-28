@@ -1,11 +1,8 @@
 html,body {
-    --highlight: yellow;
     --text_color: black;
-    --nav_color: brown;
-    --dark_bg: black;
     --dark_tx_color: white;
     --light_bg: white;
-    --light_tx_color: black;
+    --dark_bg: black;
     --foot_color: linear-gradient(to bottom, rgba(112, 0, 160, 1) 0%,rgba(160, 0, 155, 1) 100%);
 
     height: 100%;
@@ -13,22 +10,9 @@ html,body {
     margin: 0; 
     padding: 0;
     background: linear-gradient(to bottom, rgba(18, 18, 21, 1) 0%,rgba(38, 38, 41, 1) 100%);
-    
-
+    overflow-x: hidden;
+    box-sizing: border-box;
 }
-
-body {
-
-    min-height: 100vh;
-    height: 100%;
-    width: 100%;
-    display: flex; /* Use flex to enable flexbox */
-    flex-direction: column;
-    align-items: center; /* Center items vertically */
-    justify-content: flex-start; /* Center items horizontally */
-    padding-top: 160px;
-}
-
 
 
 header {
@@ -36,11 +20,35 @@ header {
     display: flex; /* Enables Flexbox on the header */
     align-items: center; /* Vertically centers the content */
     height: 60px; /* Fixed height for the header */
-    position:absolute ;
+    position: relative;
     top: 0;
-    z-index: 1;
     border-radius: 0px 0px 0px 0px;
     border-bottom: 2px solid rgba(255, 255, 255, 0.5); /* Adjust thickness and color */
+   
+}
+
+.container_main {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    overflow: auto;
+    padding-top: 120px;
+}
+
+.container_main h1 {
+    flex: 1;
+    position: static;
+    width: auto;
+    color: white;
+    font-family: Roboto;
+    font-style: italic;
+    font-size: 40 px;
+    font-weight: 400;
+    text-align: center;
+    align-items: center;
+    line-height: 1.2;
 }
 
 .logo {
@@ -51,13 +59,15 @@ header {
     line-height: 1;
     color: white;
     align-items: start;
-    padding-left: 20px;
+    padding-left: 32px;
     text-decoration: none;
+    width: 100%;
 }
 
 .menu {
-    align-content: end;
-    padding-left: 800px;
+    align-items: end;
+    width: 100%;
+   justify-content: flex-end;
 
 }
 
@@ -87,15 +97,6 @@ header {
     font-weight: 700;
 }
   
-.kezdolap {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex: 1;
-    width: 100%;
-    height: auto;
-}
-
 @media (max-width: 1440px), (max-height: 1024px) {
     .kezdolap {
         width: auto; /* Full viewport width */
@@ -104,85 +105,30 @@ header {
     }
 }
 
-
 .container_index {
     width: auto;
-    height: auto;
+    height: 100%;
     display: flex;
     align-items: center;
     align-content: center;
     justify-content: center;
     gap: 20px;
 }
-
-.container_ceg {
-    width: auto;
-    height: auto;
-    display: flex;
-    align-items: center;
-    align-content: center;
-    justify-content: center;
-    flex-direction: column;
-    gap: 20px;
-}
-
-
-.container_ceg h1 {
-    flex: 1;
-    position: static;
-    width: auto;
-    color: white;
-    font-family: Roboto;
-    font-style: italic;
-    font-size: 40 px;
-    font-weight: 400;
-    align-items: center;
-    line-height: 1.2;
-}
-
-.container_szolg {
-    width: auto;
-    height: auto;
-    display: flex;
-    align-items: center;
-    align-content: center;
-    justify-content: center;
-    flex-direction: column;
-    gap: 20px;
-}
-
-
-.container_szolg h1 {
-    flex: 1;
-    position: static;
-    width: auto;
-    color: white;
-    font-family: Roboto;
-    font-style: italic;
-    font-size: 40 px;
-    font-weight: 400;
-    align-items: center;
-    line-height: 1.2;
-}
-
 
 .grid-container {
     display: grid;
     grid-template-columns: repeat(3, 400px);
-    grid-template-rows: repeat(5, auto);
+    grid-template-rows: auto;
     align-items: start;
-    width: auto;
-    max-width: 1440px;
+    width: 100%;
+    max-width: 100%;
     position:static;
     flex-direction: column;
     justify-content: start;
-    padding: 50px 50px 50px 50px;
+    padding: 50px;
     box-sizing: border-box;
     gap: 20px;
 }
-
-
-
 
 .grid-item0 {
     color: white; /* Text color of grid items */
@@ -194,6 +140,7 @@ header {
     color: white;
     width: 100%;
 }
+
 .grid-item1 {
     font-family: Roboto;
     color: white; /* Text color of grid items */
@@ -207,7 +154,6 @@ header {
     text-align: center;
     color: white;
     width: 100%;
-    
 }
 
 .grid-item2 {
@@ -224,8 +170,6 @@ header {
 
 }
 
-
-
 .acme {
     color: rgba(255, 255, 255, 1);
     text-transform: none;
@@ -240,6 +184,9 @@ header {
     font-family: "Roboto";
     font-style: normal;
     font-weight: 900;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     }
 
 .divider {
@@ -262,7 +209,9 @@ header {
     color: #333;
     cursor: pointer;
     padding-bottom: 5px; /* Space for the hover line */
-
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .infobox a {
@@ -281,9 +230,10 @@ header {
     font-family: "Roboto";
     font-style: normal;
     font-weight: 100;
-
     position: relative;
-    display: inline-block; /* To ensure the pseudo-element positions relative to the text */
+    display: flex; /* Use flexbox to align text properly */
+    flex-direction: column; /* Ensure links are stacked vertically */
+    align-items: flex-start; 
    
 }
 
@@ -313,39 +263,15 @@ header {
     transform-origin: bottom left; /* Line expands from the left */
 }
 
-
-
-.container_kapcsolat {
-
-    display: flex;
-    align-items: center;
-
-    gap: 20px;
-
-    
-}
-
-
-.container_kapcsolat h1 {
-    flex: 1;
-    position: static;
-    width: auto;
-    color: white;
-    font-family: Roboto;
-    font-style: italic;
-    font-size: 40 px;
-    font-weight: 400;
-    align-items: center;
-    line-height: 1.2;
-}
-
-
-
 .kapcsolat_box {
     display: grid;
-    grid-template-columns: repeat(2, 500px);
+    width: 100%;
+    grid-template-columns: repeat(2, 1fr);
     flex-direction: column;
-    padding: 20px;
+    
+    
+   
+
 }
 
 .kapcsolat_box_left {
@@ -353,14 +279,14 @@ header {
     color: white;
     font-family: Roboto;
     font-size: 40 px;
-    align-items: left;
-    padding-right: 20px;
+    align-items: start;
+
     line-height: 1.2;
     font-style: italic;
 }
 
 .kapcsolat_box_right {
-    padding-left: 120px;
+    align-items: end;
 }
 
 
@@ -391,10 +317,8 @@ header {
 .form-container {
     display: flex;
     background-color: #fff;
-    padding: 20px;
     width: 100%;
     justify-content:space-between;
-    max-width: 1024px;
     background-color: var(--light_bg);
     color: var(--text_color);
 }
@@ -462,9 +386,6 @@ footer {
     padding-top: 80px;
     padding-bottom: 80px;
     text-align: center;
-}
-
-.footer_text {
     color: rgba(255, 255, 255, 1);
     font-family: "Roboto";
     font-style: normal;
@@ -475,5 +396,4 @@ footer {
     text-decoration: none;
     text-transform: none;
     text-transform: none;
-
 }

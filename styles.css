@@ -16,7 +16,6 @@ html,body {
 
 
 header {
-    width: 100%;
     display: flex; /* Enables Flexbox on the header */
     align-items: center; /* Vertically centers the content */
     height: 60px; /* Fixed height for the header */
@@ -27,6 +26,26 @@ header {
    
 }
 
+.logo {
+    width: 50%;
+    font-size: 40px;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: 100;
+    line-height: 1;
+    color: white;
+    align-items: start;
+    padding-left: 32px;
+    text-decoration: none;
+}
+
+.menu {
+    width: 50%;
+    align-items: end;
+    justify-content: flex-end;
+
+}
+
 .container_main {
     width: 100%;
     display: flex;
@@ -34,10 +53,11 @@ header {
     align-items: center;
     justify-content: flex-start;
     overflow: auto;
-    padding-top: 120px;
+    padding-top: 60px;
+    position: relative; 
 }
 
-.container_main h1 {
+.container_main h2 {
     flex: 1;
     position: static;
     width: auto;
@@ -51,23 +71,14 @@ header {
     line-height: 1.2;
 }
 
-.logo {
-    font-size: 40px;
-    font-family: Roboto;
-    font-style: normal;
-    font-weight: 100;
-    line-height: 1;
-    color: white;
-    align-items: start;
-    padding-left: 32px;
-    text-decoration: none;
-    width: 100%;
+.pic {
+    width: 50%;
+    text-align: left;
 }
 
-.menu {
-    align-items: end;
-    width: 100%;
-   justify-content: flex-end;
+.webpage {
+    width: 50%;
+    text-align: right;
 
 }
 
@@ -106,7 +117,6 @@ header {
 }
 
 .container_index {
-    width: auto;
     height: 100%;
     display: flex;
     align-items: center;
@@ -127,7 +137,7 @@ header {
     justify-content: start;
     padding: 50px;
     box-sizing: border-box;
-    gap: 20px;
+    gap: 50px;
 }
 
 .grid-item0 {
@@ -135,10 +145,10 @@ header {
     display: flex; /* Flexbox for centering text */
     align-items: center; /* Center items vertically */
     justify-content: center; /* Center items horizontally */
-    font-size: 16px; /* Font size */
+    font-size: 16px;
     text-align: center;
     color: white;
-    width: 100%;
+    padding: 20px;
 }
 
 .grid-item1 {
@@ -147,13 +157,14 @@ header {
     display: flex; /* Flexbox for centering text */
     align-items: center; /* Center items vertically */
     justify-content: center; /* Center items horizontally */
-    font-size: 24px; /* Font size */
+    font-size: 24px; 
     font-weight: 700;
     line-height: 1.2;
     letter-spacing: 0;
     text-align: center;
     color: white;
-    width: 100%;
+    padding-left: 40px;
+    padding-right: 40px;
 }
 
 .grid-item2 {
@@ -162,12 +173,12 @@ header {
     display: flex; /* Flexbox for centering text */
     align-items: center; /* Center items vertically */
     justify-content: center; /* Center items horizontally */
-    font-size: 24px; /* Font size */
+    font-size: 24px;
     font-weight: 400;
     text-align: left;
     color: white;
-    width: 100%;
-
+    padding-left: 10px;
+    padding-right: 10px;
 }
 
 .acme {
@@ -265,7 +276,6 @@ header {
 
 .kapcsolat_box {
     display: grid;
-    width: 100%;
     grid-template-columns: repeat(2, 1fr);
     flex-direction: column;
     
@@ -291,7 +301,6 @@ header {
 
 
 .kapcsolat_right iframe {
-    width: 100%;
     height: 100%;
     border: 0;
     border-radius: 8px;
@@ -317,7 +326,6 @@ header {
 .form-container {
     display: flex;
     background-color: #fff;
-    width: 100%;
     justify-content:space-between;
     background-color: var(--light_bg);
     color: var(--text_color);
@@ -327,7 +335,6 @@ header {
     display: flex;
     justify-content:space-between;
     flex-wrap: wrap;
-    width: 100%;
 }
 
 .col {
@@ -358,7 +365,6 @@ label {
     font-size: 24px;
     display:block;
     max-width: 180px;
-    width: 100%;
     text-align: left;
     font-weight: 700;
 }
@@ -369,8 +375,6 @@ input, textarea {
 .kuld {
     text-align: right;
     background-color: var(--foot_color);
-
-    width: 100%;
     padding: 10px;
     color: white;
     border: none;
@@ -378,13 +382,20 @@ input, textarea {
     font-size: 24px;
 }
 
-footer {
+.main {
     width: 100%;
+    padding-left: 60px;
+    padding-right: 60px;
+}
+
+
+footer {
     background: var(--foot_color);
     display: flex;
     justify-content: center;
     padding-top: 80px;
     padding-bottom: 80px;
+    padding-left: 200px;
     text-align: center;
     color: rgba(255, 255, 255, 1);
     font-family: "Roboto";

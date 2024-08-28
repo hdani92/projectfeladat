@@ -4,70 +4,64 @@ html,body {
     --light_bg: white;
     --dark_bg: black;
     --foot_color: linear-gradient(to bottom, rgba(112, 0, 160, 1) 0%,rgba(160, 0, 155, 1) 100%);
+    --unselected_menu: #aaaaaa;
+    --background: linear-gradient(to bottom, rgba(18, 18, 21, 1) 0%,rgba(38, 38, 41, 1) 100%);
+    --logo_color: rgba(255, 255, 255, 1);
 
     height: 100%;
     width: 100%;
     margin: 0; 
     padding: 0;
-    background: linear-gradient(to bottom, rgba(18, 18, 21, 1) 0%,rgba(38, 38, 41, 1) 100%);
+    background: var(--background);
     overflow-x: hidden;
     box-sizing: border-box;
 }
 
 
 header {
-    display: flex; /* Enables Flexbox on the header */
-    align-items: center; /* Vertically centers the content */
-    height: 60px; /* Fixed height for the header */
+    display: flex;
+    align-items: center;
+    height: 80px;
+    width: 100%;
     position: relative;
     top: 0;
-    border-radius: 0px 0px 0px 0px;
-    border-bottom: 2px solid rgba(255, 255, 255, 0.5); /* Adjust thickness and color */
-   
+    border-bottom: 2px solid rgba(255, 255, 255, 0.5); 
+    padding: 0px;
+    justify-content: space-between;
 }
 
 .logo {
-    width: 50%;
+    
     font-size: 40px;
     font-family: Roboto;
     font-style: normal;
     font-weight: 100;
     line-height: 1;
-    color: white;
+    color: var(--dark_tx_color);
     align-items: start;
-    padding-left: 32px;
+    margin-left: 60px;
     text-decoration: none;
 }
 
 .menu {
-    width: 50%;
-    align-items: end;
+    display: flex;
     justify-content: flex-end;
-
+    margin-right: 60px;
 }
 
 .container_main {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
     align-items: center;
-    justify-content: flex-start;
-    overflow: auto;
-    padding-top: 60px;
-    position: relative; 
+    justify-content: center;
+    padding-top: 50px;
 }
 
 .container_main h2 {
-    flex: 1;
-    position: static;
-    width: auto;
-    color: white;
+    color: var(--dark_tx_color);
     font-family: Roboto;
     font-style: italic;
-    font-size: 40 px;
+    font-size: 40px;
     font-weight: 400;
     text-align: center;
-    align-items: center;
     line-height: 1.2;
 }
 
@@ -91,20 +85,19 @@ header {
 }
 
 .menu ul li {
-    margin-left: 20px;
+    margin-left: 60px;
 }
 
 .menu ul li a {
     font-family: Roboto;
     text-decoration: none;
-    color: #aaaaaa;
+    color: var(--unselected_menu);
     font-size: 24px;
-    transition: background-color 0.3s ease;
     font-weight: 400;
 }
 
 .menu ul li a.active {
-    color: white; 
+    color: var(--dark_tx_color);
     font-weight: 700;
 }
   
@@ -127,68 +120,65 @@ header {
 
 .grid-container {
     display: grid;
-    grid-template-columns: repeat(3, 400px);
-    grid-template-rows: auto;
+    grid-template-columns: repeat(3, auto);
+    grid-template-rows: 50px;
     align-items: start;
-    width: 100%;
     max-width: 100%;
     position:static;
     flex-direction: column;
     justify-content: start;
-    padding: 50px;
     box-sizing: border-box;
-    gap: 50px;
+    gap: 20px;
+    padding-bottom: 50px;
 }
 
 .grid-item0 {
-    color: white; /* Text color of grid items */
-    display: flex; /* Flexbox for centering text */
-    align-items: center; /* Center items vertically */
-    justify-content: center; /* Center items horizontally */
+    color: var(--dark_tx_color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
     font-size: 16px;
     text-align: center;
-    color: white;
-    padding: 20px;
 }
 
 .grid-item1 {
     font-family: Roboto;
-    color: white; /* Text color of grid items */
-    display: flex; /* Flexbox for centering text */
-    align-items: center; /* Center items vertically */
-    justify-content: center; /* Center items horizontally */
+    color: var(--dark_tx_color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
     font-size: 24px; 
     font-weight: 700;
     line-height: 1.2;
     letter-spacing: 0;
     text-align: center;
-    color: white;
-    padding-left: 40px;
-    padding-right: 40px;
+    padding-left: 90px;
+    padding-right: 90px;
+    padding-top: 20px;
 }
 
 .grid-item2 {
     font-family: Roboto;
-    color: white; /* Text color of grid items */
-    display: flex; /* Flexbox for centering text */
-    align-items: center; /* Center items vertically */
-    justify-content: center; /* Center items horizontally */
+    color: var(--dark_tx_color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
     font-size: 24px;
     font-weight: 400;
+    line-height: 1.2;
     text-align: left;
-    color: white;
-    padding-left: 10px;
-    padding-right: 10px;
+    padding-left: 50px;
+    padding-right: 50px;
+    padding-bottom: 20px;
 }
 
 .acme {
-    color: rgba(255, 255, 255, 1);
+    color: var(--logo_color);
     text-transform: none;
     line-break: auto;
     overflow-wrap: initial;
     white-space: pre;
     text-rendering: geometricPrecision;
-    caret-color: rgba(255, 255, 255, 1);
     text-decoration: none;
     letter-spacing: 15px;
     font-size: 64px;
@@ -203,7 +193,7 @@ header {
 .divider {
     width: 1px;
     height: 200px;
-    background-color: #F9FAFF;
+    background-color: var(--dark_tx_color);
     border-radius: 0px;
     flex-shrink: 0;
 }
@@ -276,27 +266,31 @@ header {
 
 .kapcsolat_box {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(2, 50%);
     flex-direction: column;
-    
-    
-   
-
+    padding: 50px;
 }
 
 .kapcsolat_box_left {
     width: auto;
-    color: white;
+    height: auto;
+    max-height: auto;
+    color: var(--dark_tx_color);
     font-family: Roboto;
-    font-size: 40 px;
-    align-items: start;
-
+    font-size: 24px;
     line-height: 1.2;
     font-style: italic;
+    padding-left: 50px;
 }
 
 .kapcsolat_box_right {
-    align-items: end;
+    width: auto;
+    max-width: auto;
+    height: 100%;
+    max-height: 750px;
+    align-content: end;
+    padding-left: 150px;
+    padding-right: 50px;
 }
 
 
@@ -310,25 +304,26 @@ header {
     flex: 1;
     position: static;
     width: auto;
-    color: white;
+    color: var(--dark_tx_color);
     font-family: Roboto;
     font-size: 24 px;
-    font-weight: 700;
+    font-weight: 400;
     align-items: center;
+
 }
 
 .kapcsolat_box ul {
-    color: white;
+    color: var(--dark_tx_color);
+
+
 }
 
 
 
 .form-container {
-    display: flex;
-    background-color: #fff;
-    justify-content:space-between;
     background-color: var(--light_bg);
     color: var(--text_color);
+
 }
 
 .row {
@@ -340,17 +335,27 @@ header {
 .col {
     
     justify-content:space-between;
+    padding: 50px;
 
 }
 
 .full-width {
     width: 100%;
+    padding: 50px;
 }
 
 
-input[type="text"],
-input[type="email"],
-input[type="tel"],
+input{
+    width: auto;
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    box-sizing: border-box;
+    background-color: #888888;
+
+}
+
 textarea {
     width: 100%;
     padding: 10px;
@@ -358,6 +363,7 @@ textarea {
     border: 1px solid #ddd;
     border-radius: 4px;
     box-sizing: border-box;
+    background-color: #888888;;
 }
 
 label {
@@ -368,15 +374,11 @@ label {
     text-align: left;
     font-weight: 700;
 }
-input, textarea {
-    background-color: #888888;;
-}
 
 .kuld {
     text-align: right;
-    background-color: var(--foot_color);
-    padding: 10px;
-    color: white;
+    padding: 50px;
+    color: var(--foot_color);
     border: none;
     cursor: pointer;
     font-size: 24px;
@@ -384,8 +386,6 @@ input, textarea {
 
 .main {
     width: 100%;
-    padding-left: 60px;
-    padding-right: 60px;
 }
 
 
@@ -397,7 +397,7 @@ footer {
     padding-bottom: 80px;
     padding-left: 200px;
     text-align: center;
-    color: rgba(255, 255, 255, 1);
+    color: var(--logo_color);
     font-family: "Roboto";
     font-style: normal;
     font-size: 120px;
@@ -405,6 +405,5 @@ footer {
     line-height: 1.2;
     letter-spacing: 200px;
     text-decoration: none;
-    text-transform: none;
     text-transform: none;
 }

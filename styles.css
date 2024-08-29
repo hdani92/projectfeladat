@@ -118,6 +118,126 @@ header {
     gap: 20px;
 }
 
+.ceginfo_box {
+    display: grid;
+    grid-template-columns: repeat(2, 50%);
+    flex-direction: column;
+    padding: 50px;
+}
+
+.ceginfo_pic {
+    width: auto;
+    max-width: auto;
+    height: 100%;
+    max-height: 750px;
+    align-content: end;
+    padding-left: 50px;
+    padding-right: 50px;
+}
+
+.ceginfo_vision {
+    width: 100%;
+    height: auto;
+    max-height: auto;
+    color: var(--dark_tx_color);
+    font-family: Roboto;
+    font-size: 120px;
+    line-height: 1.2;
+    padding-top: 60px;
+    margin-left: -200px;
+    display: flex;
+    position: relative;
+    z-index: 2;
+}
+
+.feedback_head {
+    align-items: center;
+    justify-content: center;
+    padding-top: 50px;
+    background-color: var(--light_bg);
+    color: var(--light_tx_color);
+    font-family: Roboto;
+    font-size: 40px;
+    font-weight: 400;
+    text-align: center;
+    line-height: 1.2;
+}
+
+.feedback-container {
+    background-color: var(--light_bg);
+    display: grid;
+    grid-template-columns: repeat(3, auto);
+    grid-template-rows: 50px;
+    align-items: start;
+    max-width: 100%;
+    position:static;
+    flex-direction: column;
+    justify-content: start;
+    box-sizing: border-box;
+    gap: 20px;
+    padding: 50px;
+}
+
+.feedback-item0 {
+    color: var(--dark_tx_color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 16px;
+    text-align: center;
+}
+
+.feedback-item0 img {
+    border-radius: 500px;
+}
+
+.feedback-item1 {
+    font-family: Roboto;
+    color: var(--light_tx_color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 30px; 
+    font-weight: 400;
+    line-height: 1.2;
+    font-style: italic;
+    letter-spacing: 0;
+    text-align: left;
+    padding-left: 30px;
+    padding-right: 30px;
+    padding-top: 150px;
+}
+
+.feedback-item2 {
+    font-family: Roboto;
+    color: #7000a0;
+    display: flex;
+    align-items: end;
+    justify-content: end;
+    font-size: 24px;
+    font-weight: 400;
+    line-height: 1.2;
+    text-align: right;
+    padding-top: 20px;
+    padding-left: 50px;
+    padding-right: 50px;
+    padding-bottom: 20px;
+}
+
+.intro {
+    width: auto;
+    height: auto;
+    max-height: auto;
+    color: var(--dark_tx_color);
+    font-family: Roboto;
+    font-size: 24px;
+    line-height: 1.2;
+    padding-top: 50px;
+    padding-left: 100px;
+    padding-right: 100px;
+    padding-bottom: 50px;
+}
+
 .grid-container {
     display: grid;
     grid-template-columns: repeat(3, auto);
